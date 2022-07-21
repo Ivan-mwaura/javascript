@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<button onclick = getRandomNumber() id = demo>Click to generate </button>
+<script>
+ function getRandomNumber(){
+   var random = Math.random();
+
+   document.write(random);
+ }
+</script>
+<br>
+<br>
+<button onclick = generaterandomNumber(1,100)> Click to generate integer numbers</button>
+<p id = trial></p>
+<script>
+  function generaterandomNumber(min, max){
+    var engine = Math.floor(Math.random() * (max- min +1 ) + min);//This function returns both the max and min values.The max and min are the val
+    // ues 1 and 100 . when subtracted they generate 99 which is the range .  This means that numbers generated will be form 1-99. + 1 includes the 100.
+
+    document.write(engine);
+  }
+</script>
+
+</body>
+</html>

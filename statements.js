@@ -1,0 +1,2 @@
+document.getElementById("demo").innerHTML = "javaScript is very fun and can be used to add features to websites";
+document.getElementById("prac").innerHTML = "In Order to learn javascript one has to have basic knowledge in HTML and CSS";

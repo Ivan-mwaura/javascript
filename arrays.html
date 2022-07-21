@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<script>
+var arrays  = [" sergio", " Mane"," Salah"];
+
+arrays.push(" Drogba"," Costa");
+arrays.unshift("Pogba"," Ronaldo");
+
+var arr = arrays[1];
+var ar = arrays[arrays.length - 1];
+var arra = arrays.length;
+
+document.write(arr + " " + ar + " are " + arra + " points apart" + "<br>");
+document.write(arrays);
+
+</script>
+<p id = demo>Major Cities are : <br></p>
+<script>
+    var cities = ["Nairobi"," Qatar"," Mumbai"," California"," Kampala"];
+
+    for (var i = 0; i < cities.length; i++){
+        document.getElementById("demo").innerHTML +=  cities[i] + "<br>";
+    }
+
+</script>
+<script>
+    var cities = ["Nairobi"," Qatar"," Mumbai"," California"," Kampala"];
+    cities.forEach(function (value, index ){
+        document.write(index + ":" + value +"<br>");
+            });
+</script>
+<br>
+<script>
+    var cities = ["Nairobi"," Qatar"," Mumbai"," California"," Kampala"];
+    var arrays  = [" sergio", " Mane"," Salah"];
+    arrays[1] = "Wanjapi";
+    var concatenate = cities.concat(arrays);
+
+
+    document.write(concatenate + " are all my favourites");
+    var conne  = cities.slice(0, 3)
+
+    document.write(conne);
+</script>
+<p id = trial></p>
+<script>
+    var num = [100,500,600,400,300,700];
+
+    num.sort(compareFunction);
+    function compareFunction(a,b){
+        return b-a;
+    }
+    var highest = num[0];
+
+    document.getElementById("trial").innerHTML += num + " ";
+    document.write(highest + "<br>");
+
+    for (var i = 0; i < num.length; i++){
+        var sum =  i + num[i];
+    }
+    document.write(sum);
+
+</script>
+<br>
+<script>
+    var num = [100,500,600,400,300,700];
+
+    var numtimestwo = num.map(function(value){
+        return value * 2 ;
+    });
+    document.write(numtimestwo);
+</script>
+<br>
+<script>
+    var num = [100,500,600,400,300,700];
+
+    var numdividetwo = num.filter(function(value){
+        return value * 3 ;
+    });
+    document.write(numdividetwo);
+</script>
+<p id = tes></p>
+<button onclick = greetUser()>Hello!</button>
+<script>
+    function greetUser(){
+        var time = new Date().getHours();
+        if(time < 11){
+            return "Good morning Evans";
+        }
+        else if(time < 18){
+            return "Good afternoon Evans";
+        }
+        else{
+            return "Good evening Evans";
+        }
+        document.getElementById("tes").innerHTML += (greetUser());
+    }
+</script>
+</body>
+</html>

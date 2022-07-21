@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id  = demo></p>
+<script>
+    class City {
+        constructor(cityName,citybank,citystreet) {
+            this.name = cityName;
+            this.bank = citybank;
+            this.street = citystreet;
+        }
+    }
+    let city = new City("Nairobi", "CBK", "Moi avenue");
+    document.getElementById("demo").innerHTML = "The capital city of kenya is " + city.name + " and the national bank " +
+        " that prints money is the " + city.bank + " and the street that leads to the national archives is " + city.street;
+</script>
+<script>
+    class World{
+        constructor(continents, countries, oceans, superpowers) {
+            this.continent = continents;
+            this.country = countries;
+            this.ocean = oceans;
+            this.superpower = superpowers;
+        }
+        showinfo(){
+            document.write("There are " + dunia.continent + " continents and over " + dunia.country+ " countries. The world has over "+ dunia.ocean
+                + " oceans and the strongest superpower is " + dunia.superpower);
+        }
+    }
+    let dunia =new World(6, 2000, 10, "United states of America");
+    dunia.showinfo();
+</script>
+<p id = evans></p>
+<script>
+    class Pet{
+        constructor(AnimalName,AnimalSound) {
+            this.name = AnimalName;
+            this.sound = AnimalSound;
+
+        }
+        animal_1(){
+            return this.name + " " + this.sound + " and eats.";
+        }
+    }
+    class family extends Pet{
+        constructor(AnimalName,AnimalSound){
+            super(AnimalName,AnimalSound);
+        }
+        animal_2(){
+            return this.name + " also like working";
+        }
+        showdetails(){
+            document.getElementById("evans").innerHTML = pets.animal_1() +" " + pets.animal_2();
+        }
+    }
+    let pets = new family("Dogs", "bark");
+    pets.showdetails();
+
+</script>
+</body>
+</html>

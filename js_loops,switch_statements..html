@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id = trial></p>
+<label for=commodities> Choose a fruit
+    <select id = commodities onchange = checkcost()>
+    <option value = Flour>Flour</option>
+    <option value = Juice>Juice</option>
+    <option value = Toiletries>Toiletries</option>
+    <option value = Ice-cream>Ice cream</option>
+</select>
+</label>
+<script>
+    function checkcost(){
+var items = document.getElementById("commodities").value;
+    switch (items){
+        case "Flour":
+            var price = 200;
+            var quantity = 5;
+            var total_cost = price * quantity;
+
+            document.getElementById("trial").innerHTML += "The total cost of the Flour is" + total_cost + "<br>"
+            break;
+
+        case "Juice":
+            let pric = 250;
+            let quantit = 10;
+            let total_cos = pric * quantit;
+
+            document.getElementById("trial").innerHTML += "The total cost of Juice is" + total_cos + "<br>";
+            break;
+
+        case "Toiletries":
+            let pri = 100;
+            let quanti = 10;
+            let total_co = pri * quanti;
+
+            document.getElementById("trial").innerHTML += "The total cost of the Toiletries is" + total_co + "<br>";
+            break;
+        case "Ice-cream":
+            let pr = 500;
+            let quant = 10;
+            let total_c = pr * quant;
+
+            document.getElementById("trial").innerHTML += "The total cost of the Ice cream is" + total_c + "<br>";
+            break;
+        default:
+            document.getElementById("tria").innerHTML += "not in the list" + "<br>";
+
+    }
+    }
+</script>
+
+</body>
+</html>

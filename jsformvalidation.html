@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id = trial></p>
+<form action="jsclasses.html" method="get" onsubmit="returnForm">
+    <label for="demo">
+        <input type="text" name="Index Number" id = demo placeholder="Index-No" >
+    </label>
+    <input type="submit">
+</form>
+<script>
+    function returnForm(){
+        alert("This form will nt be submitted");
+        return false;
+    }
+</script>
+<form action="" method="post" onsubmit = ValidateForm()>
+    <label for= Chuo></label><input type = text id = Chuo name="School" placeholder=" university">
+    <input type = submit>
+</form>
+<script>
+    function ValidateForm(){
+        let shule = document.getElementById("Chuo").value;
+        if(shule === ""){
+            alert("Please enter a valid value");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

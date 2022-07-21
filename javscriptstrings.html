@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p></p>
+<button onclick = greetings() id  = ten>Let me greet you</button>
+<script>
+    function greetings(){
+        var username = window.prompt("Hello, Welcome to the tutorial! May I know your name?");
+        var string = "Nice to meet you " + username + " !" + "Welcome to the javascript tutorial!"
+
+        document.write(string);
+    }
+    //string length
+</script>
+<br>
+<script>
+    var str = "Many peole ask, 'is Javascript a good programming language ?',The argument is" ;
+     let result = str.length;
+
+     document.write(result);
+</script>
+<br>
+<script>
+    var str = "Many peole ask, 'is Javascript a good programming language ?',The argument is";
+    var code = "codeliber"
+    var strlen = code[2];
+    document.write(strlen);
+</script>
+<br>
+<script>
+    var str = "Javascript is good";
+    var strl = "Javascript is good";
+    var strle = "Javascript is is good";
+
+
+    var dig = str.search("is");
+    var dod = strl.indexOf("is");
+    var dog = strl.lastIndexOf("is");
+
+
+    document.write(dig);
+
+    document.write(dod);
+
+    document.write(dog);
+</script>
+<script>
+    var trial = "Many peole ask is Javascript a good programming language The argument is true";
+    var result = trial.slice(10, 19);
+
+
+    document.write(result);
+</script>
+<br>
+<script>
+    var me =" coding is fun";
+    var you = me.concat(", " + "Javascript is the best language to code with");
+
+    document.write(you);
+</script>
+</body>
+</html>

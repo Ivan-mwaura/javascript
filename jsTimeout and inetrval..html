@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id = trial></p>
+<label for=commodities> Choose a fruit
+    <select id = commodities onchange = checkcost()>
+        <option value = Flour>Flour</option>
+        <option value = Juice>Juice</option>
+        <option value = Toiletries>Toiletries</option>
+        <option value = Ice-cream>Ice cream</option>
+    </select>
+</label >
+<br>
+<br>
+<button id = click onclick="checkcost()">Click to generate quantity</button>
+<br>
+<button id = cricket onclick="function canceltimeout() {
+  clearTimeout(timeout);
+}
+canceltimeout()">Click to cancel time out</button>
+<script>
+    function checkcost() {
+        var timeout = setTimeout(function () {
+            var goods = document.getElementById("commodities").value;
+            var max = 100;
+            var min = 1;
+            var generate = Math.floor(Math.random() * (max - min) + min)
+            document.getElementById("trial").innerHTML += "The total quantity generated is : " + generate + " " + "and" + " ";
+
+            switch (goods) {
+                case "Flour":
+                    var price = 200;
+                    var total_cost = price * generate;
+
+                    document.getElementById("trial").innerHTML += "The total cost of the Flour is" + total_cost + "<br>"
+                    break;
+
+                case "Juice":
+                    let pric = 250;
+                    let total_cos = pric * generate;
+
+                    document.getElementById("trial").innerHTML += "The total cost of Juice is" + total_cos + "<br>";
+                    break;
+
+                case "Toiletries":
+                    let pri = 100;
+                    let total_co = pri * generate;
+
+                    document.getElementById("trial").innerHTML += "The total cost of the Toiletries is" + total_co + "<br>";
+                    break;
+                case "Ice-cream":
+                    let pr = 500;
+                    let total_c = pr * generate;
+
+                    document.getElementById("trial").innerHTML += "The total cost of the Ice cream is" + total_c + "<br>";
+                    break;
+                default:
+                    document.getElementById("tria").innerHTML += "not in the list" + "<br>";
+            }
+        },3000);
+
+        }
+</script>
+<p id = evans>10</p> 
+<button onclick = cancelinterval()>Click to stop the interval</button>
+<script>
+    var  x = 10;
+
+    var interval = setInterval(function (){
+      x += 10;// adds 10 to x simultaneously till the interval stops.
+        document.getElementById("evans").innerHTML = x;
+    },1000);
+
+    function cancelinterval(){
+        clearInterval(interval);
+    }
+</script>
+</body>
+</html>

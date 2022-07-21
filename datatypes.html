@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+    <style>
+        var{
+            color : gold;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var IsmathFun = true;
+    var IscodingFun = true;
+
+    document.write("Is coding Fun ?" + "&nbsp;" + "&hyphen;"+ IsmathFun + "<br>" + "Is coding Fun?" + "&nbsp;" + "&hyphen;" + IscodingFun);
+
+</script>
+<p id = demon></p>
+<script>
+    var x = 4;
+    var y = 5;
+
+    var aretheyequal = (x == y);
+
+    document.getElementById("demon").innerHTML= aretheyequal;
+</script>
+<p id = error></p>
+<script>
+    var banana = {
+        color : "yellow",
+            size: "long",
+            quantity: 5,
+        sweet : true,
+    };
+    </script>
+    <script>
+    document.getElementById("error").innerHTML = "banana <br>" +
+        "color:" + banana.color + "<br>" +
+        "size: " + banana.size + "<br>" +
+        "quantity: " + banana.quantity + "<br>" +
+        "Does it taste sweet" + "&nbsp;&hyphen;"+ banana.sweet ;
+</script>
+<p id = cancel></p>
+<script>
+    var testScore = 80;
+    {
+        if (testScore >= 80){
+            document.getElementById("cancel").innerHTML = "passed!"
+        } else
+            document.getElementById("cancel").innerHTML = "failed";
+    }
+</script>
+</body>
+</html>

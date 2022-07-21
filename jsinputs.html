@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id = demo></p>
+<form>
+<label for=trial><input type="text" id = trial name="input" placeholder="Enter anything "></label>
+<button onclick="getvalue()">click to get the value</button>
+</form>
+<script>
+    function getvalue(){
+        let val = document.getElementsByName("input")[0].value;
+        alert("The value entered is :" + val);
+
+    }
+
+</script>
+</body>
+</html>

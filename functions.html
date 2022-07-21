@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+</head>
+<body>
+<p id = demo></p>
+<script>
+    //function definition and  function name
+    function Writetext(str){
+        document.getElementById("demo").innerHTML = str;
+    }
+    Writetext("I love coding in javascript");//calling a function
+</script>
+<p id = mane></p>
+<script>
+    //function definition
+    function addnumbers(num1, num2){
+        var sum = num1 + num2;
+        document.getElementById("mane").innerHTML = sum;
+    }
+     addnumbers(5, 6);// calling a function
+</script>
+<p id="salah">Sum will be printed here</p>
+<button id = Binnie onclick="multiply(5, 6);">Show product</button>
+<script>
+    function multiply(n1, n2){
+        var mult = n1 * n2;
+        document.getElementById("salah").innerHTML = mult;
+        alert(mult);
+    }
+</script>
+<br>
+<p id = function></p>
+<script>
+    function pale(Fname, Secname){
+        var getfullname = Fname + " " + Secname;//local variable
+        return(getfullname);
+    }
+    var getfullname = pale("Evan", "Gachanja");//function call
+
+    document.getElementById("function").innerHTML = getfullname;
+</script>
+<p id = maths></p>
+<script>
+    function getkilometer(value1){
+
+        var converteddistance = value1 / 1000;
+
+        return(converteddistance);
+    }
+    var converteddistance = getkilometer(40);
+
+    document.getElementById("maths").innerHTML = converteddistance;
+
+</script>
+<p id = square></p>
+<button onclick = getArea(40,40) id  = joan>show area</button>
+<script>
+    function getArea(length, width){
+        var area = length *  width;
+        document.getElementById("square").innerHTML = area;
+    }
+var timeout = setTimeout(getArea,5000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.evans.com</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+<div onclick="changeColor(this)" id=style style="background-color:red;">Tap me to change my color</div>
+<div> <button onclick="hide()" id="Hide">Hide</button>
+      <button onclick="show()" id="Show"> Show</button>
+</div>
+<div>
+    <img src="../Photos/horticulture_1.jpeg" alt="No Image"/>
+    <button onclick="changeImage()" id="click">Change-Image</button>
+</div>
+
+<script>
+    function changeColor(element) {
+        let currentColor = element.style.backgroundColor;
+        if (currentColor === "red") {
+            element.style.backgroundColor = "green";
+        } else {
+            element.style.backgroundColor = "red";
+        }
+    }
+</script>
+<script>
+    function show() {
+        document.getElementById("style").style.display = "block";
+    }
+    function hide(){
+        document.getElementById("style").style.display="none";
+    }
+</script>
+<script>
+    function changeImage(){
+        document.getElementById("click").src="../Photos/horticulture_1.jpeg";
+    }
+</script>
+<script>document.write("I can code");</script>
+<script>
+    let x = 5;
+    let y = 5;
+
+    let sum = x + y;
+
+    console.log(sum);
+</script>
+</body>
+</html>
